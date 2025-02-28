@@ -1,0 +1,73 @@
+<link rel="stylesheet" href="{{ "/assets/css4.1/bootstrapcustom.min.css" crossorigin="anonymous" | relative_url }}">
+<style>
+  /* Add custom CSS to center-align the navbar */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar-brand {
+    margin-bottom: 20px;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-item {
+    margin: 10px;
+  }
+
+  /* Add media query to override the navbar background color */
+  @media (max-width: 992px) {
+    .bg-dark {
+      background-color: transparent;
+    }
+  }
+</style>
+
+<div class="bootstrapiso">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand  mb-0 h1" href="{{ '/about' | prepend: site.baseurl }}">Vijay Kumar Polimeru</a>
+
+      <div class="navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav flex-row justify-content-center">
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ '/about' | prepend: site.baseurl }}">About Me <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ '/employment' | prepend: site.baseurl }}">Employment <span class="sr-only">(current)</span></a>
+          </li>		  
+          <li class="nav-item active">
+            <a class="nav-link" href="{{ '/publications' | prepend: site.baseurl }}">R&D Publications <span class="sr-only">(current)</span></a>
+          </li>				  
+          <!-- <li class="nav-item"> -->
+            <!-- <a class="nav-link" href="{{ '/employment' | prepend: site.baseurl }}">Link</a> -->
+          <!-- </li> -->
+          <li class="nav-item dropdown active">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Blogging and Misc
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			  <a class="dropdown-item" href="{{ site.baseurl }}/">Posts</a>
+			  <a class="dropdown-item" href="{{ '/tags' | prepend: site.baseurl }}">Tags</a>
+			  <a class="dropdown-item" href="{{ '/misc' | prepend: site.baseurl }}">Miscellaneous</a>
+              <!-- <a class="dropdown-item" href="#">Another action</a> -->
+              <!-- <div class="dropdown-divider"></div> -->
+              <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+            </div>
+          </li>
+          <!-- <li class="nav-item"> -->
+            <!-- <a class="nav-link disabled" href="#">Disabled</a> -->
+          <!-- </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<div class="post">
+  <div class="post-info">
+    <span>Written by</span>
+    {% if page.author %}
+        {{ page.author }}
+    {% else %}
+        {{ site.author.name }}
+    {% endif %}
+
+    {% if page.date %}
+      <br>
+      <span>on&nbsp;</span><time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
+    {% endif %}
+  </div>
+
+  <h1 class="post-title">{{ page.title }}</h1>
+  <div class="post-line"></div>
+
+  {{ content }}
+</div>
+
+{% if page.buy_me_a_book %}
+  {% include buy_me_a_book.html %}
+{% endif %}
+
+
+{% if page.more_updates_card %}
+<link href="{{ "/assets/css4.1/bootstrapcustom.min.css" | relative_url }}" rel="stylesheet" crossorigin="anonymous">
+
+
+<div class="bootstrapiso">
+	<div class="card">
+	  <div class="card-header text-white" style="background-color: #007bff;">
+		For More Updates ...
+	  </div>
+	  <div class="card-body">
+		<p class="card-text"> Subscribe and download our best stuff (<i><b>for free</b></i>) on Civil Engineering Essentials and several other topics</p>
+		<a href="https://docs.google.com/forms/d/e/1FAIpQLScURIzUxvb4tjywGFZYxrp8w1ZcwOQbXmStFpTe6P19d6_RHA/viewform" class="btn btn-primary float-right">Subscribe...</a>
+	  </div>
+	</div>
+</div>
+{% endif %}
+
+{% if page.comments %}
+  {% include disqus_comments.html %}
+{% endif %}
+
+<div class="pagination">
+  {% if page.next.url %}
+    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592;</a>
+  {% endif %}
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">&#8594;</a>
+  {% endif %}
+
+  <a href="#" class="top">Top</a>
+</div>

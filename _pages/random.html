@@ -1,0 +1,33 @@
+---
+layout: default
+title: "Random"
+permalink: /random/
+---
+
+<link rel="stylesheet" href="{{ "/assets/css4.1/bootstrapcustom.min.css" crossorigin="anonymous" | relative_url }}">
+
+<br>
+
+<div class="bootstrapiso">
+<div class="alert alert-primary" role="alert">
+	<b>Disclaimer</b> - The articles published in this Random Collections category are originally written by other writers. 
+	   I have copied and reproduced the same article(s) here from their originally published locations for future reading. During copying, I have not modified the original 
+	   article(s). I am not responsible in any way for the content written in these articles. I hope I have cited every article appropriately, 
+	   If any information is not cited appropriately or any links are not working, please comment (in the commnet section of respective post), 
+	   I will update with appropriate ones  
+</div>
+</div>
+
+
+<div class="catalogue">
+
+  {% for post in site.random %}
+    {% if post.sticky %}
+      {% include catalogue_item.html sticky='true' %}
+    {% endif %}
+  {% endfor %}
+
+  {% for post in site.random reversed %}
+    {% include catalogue_item.html %}
+  {% endfor %}
+</div>

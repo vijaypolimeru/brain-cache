@@ -1,0 +1,46 @@
+# Site settings
+title:          Vijay Kumar Polimeru
+description:    "My Official Blog"
+baseurl:        ""
+url:            "https://vijaypolimeru.github.io/brain-cache"
+
+# Google Analytics
+google_analytics: UA-148011093-1
+
+# Author
+author:
+  name:         Vijay Kumar Polimeru
+  url:          https://vijaypolimeru.github.io/brain-cache
+  email:        vijaypolimeru@gmail.com
+
+# Build settings
+markdown:       kramdown
+include:
+  - _pages
+
+# Collections
+collections:
+  random:
+    output: true
+
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
+
+# Gems
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
+  # - jemoji #Uncomment this to allow emoji in your post
+
+# Permalinks
+permalink:      /:year-:month-:day/:title
+paginate:       5
+
+# Excludes
+exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
+
+# Disqus (Set to your disqus id)
+disqus:         vijaypolimeru-github-io

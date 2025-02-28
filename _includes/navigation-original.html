@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="{{ "/assets/css4.1/bootstrapcustom.min.css" crossorigin="anonymous" | relative_url }}">
+<nav class="nav" style="overflow: visible !important;">
+  <div class="nav-container">
+    <a href="{{ '/about' | prepend: site.baseurl }}">
+      <h2 class="nav-title">{{ site.title }}</h2>
+    </a>
+    <ul style="padding: 1rem">
+      <li><a href="{{ '/about' | prepend: site.baseurl }}">About Me</a></li>
+      <li><a href="{{ '/employment' | prepend: site.baseurl }}">Employment</a></li>
+	  <li><a href="{{ '/publications' | prepend: site.baseurl }}">R&D Publications</a></li>
+	  <!-- <li><a href="{{ '/courses' | prepend: site.baseurl }}">All Courses</a></li> -->
+	  <!-- <li><a href="{{ '/misc' | prepend: site.baseurl }}">Miscellaneous</a></li>	  -->
+	  <!-- <li><a href="{{ '/' | prepend: site.baseurl }}">
+	         <div class="bootstrapiso">
+				<a class="btn btn-primary btn-sm" href="{{ '/buy-me-a-coffee-page' | prepend: site.baseurl }}" role="button">Button-Test</a> 
+			 </div>
+		  </a>
+	  </li>	  	 -->
+
+
+
+	  <li>
+		 <div class="bootstrapiso">
+				<div class="btn-group">
+				  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					Blogging and Misc
+				  </button>
+				  <div class="dropdown-menu dropdown-menu-right">
+					<a class="dropdown-item" href="{{ site.baseurl }}/">Posts</a>
+					<a class="dropdown-item" href="{{ '/tags' | prepend: site.baseurl }}">Tags</a>
+					<!-- <a class="dropdown-item" href="#">Publications</a> -->
+					<a class="dropdown-item" href="{{ '/misc' | prepend: site.baseurl }}">Miscellaneous</a>
+					<!-- <a class="dropdown-item" href="#">Another action</a> -->
+					<!-- <a class="dropdown-item" href="#">Something else here</a>					 -->
+					<!-- <div class="dropdown-divider"></div> -->
+					<!-- <a class="dropdown-item" href="#">Separated link</a> -->
+				  </div>
+				</div>				
+		 </div>
+
+	  </li>	  	
+  
+    </ul>
+
+  </div>
+</nav>
